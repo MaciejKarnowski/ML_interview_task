@@ -128,8 +128,11 @@ model.save('saved_model/NN_model')
 # test if model can be loaded correctly
 # model = load_model('saved_model/NN_model')
 
-clf = load('Decision_tree.joblib')
-clf_rand = load('Random_forest.joblib')
+#clf = load('Decision_tree.joblib')
+#clf_rand = load('Random_forest.joblib')
+
+clf,clf_report=create_decision_tree()
+clf_rand,clf_rand_report=create_random_forest()
 
 # Comparision by plots, it's easy to see that NN has the best results.
 plot_history(network_history)
